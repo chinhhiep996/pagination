@@ -9,4 +9,8 @@ import { PaginationService } from './pagination/pagination.service';
 export class AppComponent {
   totalPage: number = 15;
   pageSize: number = 20;
+
+  displayCurrentPage(currentPage) {
+    console.log(currentPage);
+  }
 }

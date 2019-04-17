@@ -22,20 +22,21 @@
     opacity: .8;
 }
 
-.list-pager ul li a {
+.list-pager ul li.normal {
     cursor: pointer;
-    display: flex;
-    border: 1px solid #c6c6c6;
-    margin: 0 5px;
+    border: 1px solid #A7A6BF;
     text-align: center;
-    height: 38px;
-    width: 82px;
-    line-height: 34px;
     display: inline-block;
     text-decoration: none;
     background: #43425D;
     color: #ffffff;
     box-shadow: 3px 3px 3px #bebcbc;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    margin: 0 3px;
 }
 
 .list-pager ul li a.prev, 
@@ -43,57 +44,35 @@
     width: 112px;
 }
 
-.list-pager ul li a.last,
-.list-pager ul li a.next {
-    border-radius: 0 19px 19px 0;
-}
-
-.list-pager ul li a.prev,
-.list-pager ul li a.first {
-    border-radius: 19px 0 0 19px;
-}
-
 .list-pager ul li a.normal {
     text-decoration: none;
 }
 
-.list-pager ul li a.active,
-.list-pager ul li a.disabled {
+.list-pager ul li.active {
     background: #A7A6BF;
+}
+
+.list-pager ul li.hidden {
+    display: none !important;
+}
+
+.list-pager ul li img {
+    cursor: pointer;
+}
+
+.list-pager ul li img.disabled {
+    opacity: .4;
 }
 
 .list-pager ul li a.hidden {
     display: none !important;
 }
 
-.list-pager ul li a.normal {
-    display: inline-block;
-    margin: 0 5px;
-    border-radius: 50%;
-    width: 37px;
-    height: 37px;
-    line-height: 37px;
-    text-align: center;
-    font-size: 18px;
+.list-pager ul li.normal {
+    
 }
 
 .list-pager ul li a img {
     height: 20px;
     color: #ffffff;
-}
-
-.list-pager ul li a.next img {
-    margin-left: 8px;
-}
-
-.list-pager ul li a.prev img {
-    margin-right: 8px;
-}
-
-.list-pager ul li a.first img {
-    margin-right: 8px;
-}
-
-.list-pager ul li a.last img {
-    margin-left: 8px;
 }
