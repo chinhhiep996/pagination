@@ -1,0 +1,43 @@
+<nav class="list-pager">
+    <ul>
+        <li>
+            <a class="first" 
+                [ngClass]="{disabled:pager.currentPage === 1}" 
+                (click)="setPage(1)"
+            >
+                <img src="../../assets/image/double-left-chevron.svg">
+                First
+            </a>
+        </li>
+        <li>
+            <a class="prev" 
+                [ngClass]="{disabled:pager.currentPage === 1}" 
+                (click)="setPage(pager.currentPage - 1)"
+            >
+                <img src="../../assets/image/arrowhead-thin-outline-to-the-left.svg">
+                Previous
+            </a>
+        </li>
+        <li *ngFor="let page of pager.pages" (click)="setPage(page)">
+            <a [ngClass]="{'active':this.paginationService.currentPage === page}" class="normal">{{page}}</a>
+        </li>
+        <li >
+            <a class="next" 
+                [ngClass]="{disabled:pager.currentPage === pager.totalPages}"
+                (click)="setPage(pager.currentPage + 1)"
+            >
+                Next
+                <img src="../../assets/image/arrow-point-to-right.svg">
+            </a>
+        </li>
+        <li>
+            <a class="last" 
+                (click)="setPage(pager.totalPages)"
+                [ngClass]="{disabled:pager.currentPage === pager.totalPages}"
+            >
+                Last
+                <img src="../../assets/image/double-angle-pointing-to-right.svg" >
+            </a>
+        </li>
+    </ul>
+</nav>
